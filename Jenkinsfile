@@ -8,7 +8,8 @@ node {
    } 
 	stage('compile-package')
 	{
-		sh'mvn clear package'
+		def mvnhome = tool name: 'maven-3', type: 'maven'
+		sh"${mvnhome}/bin/mvn package"
 	}
   
    stage('Email Notification'){
