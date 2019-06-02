@@ -8,7 +8,7 @@ node {
    } 
 	stage('compile-package')
 	{
-		sh'mvn package'
+		sh'mvn clear package'
 	}
   
    stage('Email Notification'){
